@@ -1,0 +1,53 @@
+.content{
+ float:left;
+ width:60%;
+ padding:0 0 0 30px;
+ background: #006680;
+ height: 100%;
+
+}
+  .sidebar{
+     float:right;
+     width:40%;
+     padding:0 0 0 30px;
+     background: #ff0000;
+     height: 100%;
+
+   }
+h1{
+
+     border-bottom: 1px solid #bbb;
+     padding-bottom: : 20px;
+}
+
+h2{
+     color: #ff9933;
+   }
+h5{
+  color: #ff8c66;
+}
+#date{
+  color:yellow;
+  font-size:12px;
+  font-style: italic;
+   }
+#ch{
+     color:yellow;
+     font-size:15px;
+     font-style: italic;
+
+      }
+body{
+      background: #006680;
+     color:white;
+     }
+a{
+  color:#ff9933;
+}
+.btn {
+            font-style: italic;
+            background-color: yellow;
+            color: black;
+            text-align: center;
+            font-size: 15px;
+          }

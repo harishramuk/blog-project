@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{%extends 'testapp/base.html'%}
+  {% block title_block %}Technology'S Blog Home Page{%endblock%}
+  {%block content%}
+    <h1>Tech Blog</h1>
+    {% if tag %}
+    <h2>Post tag with '{{tag.name}}'</h2>
+    {%endif%}
+    {%for post in post_list%}
+
+    <a href="{{post.get_absolute_url}}"> <h2>{{post.title}}</h2></a><!-- this is show title-->
+    <p id = 'date'> Published on {{post.publish}} by {{post.author|title}}</p>
+    <p>Tags :
+       {% for tag in post.tags.all %}
+       <a href="{%url 'post_list_by_tag_name' tag.slug%}" class="btn btn-success" >{{tag.name}}</a>
+       {%if not forloop.last%},{%endif%}
+        {%endfor%}</p>
+
+    {{post.body|truncatewords:50 | linebreaks}} <!--blocl first 50 words only-->
+    {%endfor%}
+     {%include 'testapp/pagination.html' with page=post_list%}
+    {%endblock%}
